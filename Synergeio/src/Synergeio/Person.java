@@ -72,13 +72,9 @@ public abstract class Person {
     
     @Override
     public String toString(){
-        return "Ονομα: " + this.onoma + ", Επίθετο: " + this.epitheto + ", Διε�?θυνση: " + this.dieythinsi + ", Τηλέφωνο: " + this.thl + ", Α�?ιθμ�?ς ταυτ�?τητας: " + this.AT;
+        return "Ονομα: " + this.onoma + ", Επίθετο: " + this.epitheto + ", Διεύθυνση: " + this.dieythinsi + ", Τηλέφωνο: " + this.thl + ", Αριθμός ταυτότητας: " + this.AT;
     }
-    
-    //για εκτ�?πωση των ιδιοτήτων
-    public void print(){
-        System.out.println(this.toString());
-    }
+   
 
 }
 
