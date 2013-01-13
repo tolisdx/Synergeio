@@ -20,11 +20,12 @@ public class SynergeioMain extends JFrame implements ActionListener {
 
 	private JPanel cards;
 	private JMenuBar menuBar;
-	private JMenu pelatis,ypalliloi,ergasies,exit,save;
+	private JMenu pelatis,ypalliloi,kataxwrhshYpallilwn,ergasies,exit,save;
 	private JMenuItem egrPelatiMenuItem, tropPelatiMenuItem,
-			printPelatiMenuItem,saveAllMenuItem, exodosMenuItem, newTexnikosMenuItem,
+			printPelatiMenuItem,saveAllMenuItem, exodosMenuItem, newTexnikosMenuItem,diathesimotitaMenuItem,
 			newGrammateasMenuItem, programErgMenuItem,ektypwsiErgMenuItem,diekperaiwshErgMenuItem;
 	CardLayout card;
+	
 	
 	
 	
@@ -89,7 +90,7 @@ public class SynergeioMain extends JFrame implements ActionListener {
 		printPelatiMenuItem = new JMenuItem("Εκτύπωση Πελάτη");
 		printPelatiMenuItem.addActionListener(this);
 		pelatis.add(printPelatiMenuItem);
-
+		
 		/**To ypomenu twn ypallilwn
 		 * 
 		 * Kataxwrhsh ypallilwn -->Texnikos h Grammateas, 
@@ -97,22 +98,48 @@ public class SynergeioMain extends JFrame implements ActionListener {
 		ypalliloi = new JMenu("Υπάλληλοι");
 		menuBar.add(ypalliloi);
 
-		
+		kataxwrhshYpallilwn = new JMenu("Καταχώρηση Υπαλλήλων");
+		ypalliloi.add(kataxwrhshYpallilwn);
+
+		newTexnikosMenuItem = new JMenuItem("Τεχνικός");
+		newTexnikosMenuItem.addActionListener(this);
+		kataxwrhshYpallilwn.add(newTexnikosMenuItem);
+
+		newGrammateasMenuItem = new JMenuItem("Γραμματέας");
+		kataxwrhshYpallilwn.add(newGrammateasMenuItem);
+
+		diathesimotitaMenuItem = new JMenuItem("Διαθεσιμότητα Τεχνικών");
+		diathesimotitaMenuItem.addActionListener(this);
+		ypalliloi.add(diathesimotitaMenuItem);
+
 		ergasies = new JMenu("Εργασίες");
 		menuBar.add(ergasies);
 
-		
+		programErgMenuItem = new JMenuItem("Προγραμματισμός Εργασιών");
+		programErgMenuItem.addActionListener(this);
+		ergasies.add(programErgMenuItem);
+
+		ektypwsiErgMenuItem = new JMenuItem("Εκτύπωση Εργασιών");
+		ektypwsiErgMenuItem.addActionListener(this); 
+		ergasies.add(ektypwsiErgMenuItem);
+
+		diekperaiwshErgMenuItem = new JMenuItem("Διεκπεραίωση Εργασίας");
+		diekperaiwshErgMenuItem.addActionListener(this);
+		ergasies.add(diekperaiwshErgMenuItem);
+
 		save = new JMenu("Αποθήκευση");
 		menuBar.add(save);
 
-		
+		saveAllMenuItem = new JMenuItem("Αποθήκευση Κατάστασης");
+		saveAllMenuItem.addActionListener(this);
+		save.add(saveAllMenuItem);
+
 		exit = new JMenu("Έξοδος");
 		menuBar.add(exit);
 
 		exodosMenuItem = new JMenuItem("Έξοδος απο την Εφαρμογή");
 		exodosMenuItem.addActionListener(this);
 		exit.add(exodosMenuItem);
-		
 		card = new CardLayout();
 		cards = new JPanel(new CardLayout());
 		cards.setBorder(new EmptyBorder(5, 5, 5, 5));
