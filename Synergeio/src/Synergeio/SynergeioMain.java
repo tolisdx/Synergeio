@@ -25,32 +25,34 @@ import javax.swing.border.EmptyBorder;
 public class SynergeioMain extends JFrame implements ActionListener {
 
 	private JPanel cards, panelEgrPelati, panelTropPelati,panelNewTexnikos,
-			panelNewGrammateas;
-	private JMenuBar menuBar;
-	private JMenu pelatis, ypalliloi, kataxwrhshYpallilwn, ergasies, exit,
-			save;
-	private JMenuItem egrPelatiMenuItem, tropPelatiMenuItem,
-			printPelatiMenuItem, saveAllMenuItem, exodosMenuItem,
-			newTexnikosMenuItem, diathesimotitaMenuItem, newGrammateasMenuItem,
-			programErgMenuItem, ektypwsiErgMenuItem, diekperaiwshErgMenuItem;
-	private JTextField onomaTextField, epithetoTextField, dieythinsiTextField,
-			thlTextField, ATTextField, tropPelatisTF, onomaTropTF, epithetoTropTF, dieythinsiTropTF,
-			thlTropTF, ATTropTF, onomaTexnikouTF, epithetoTexnikouTF,
-			dieythinsiTexnikouTF, thlTexnikouTF, atTexnikouTF, asfalTextField, gramOnomaTF,gramDieythinsiTF,gramEpithetoTF,
-			gramThlTF,gramAtTF;
-	private JButton addpelatiButton, clearpelatiFormButton, tropopoihshButton,
-			esgTexnikosButton,
-			searchTropButton, clearTexnikosFormButton,
-			 eisagwsiGramButton,clearGrammForm;
-	private String onoma, epitheto, dieythinsi, thl, AT, asfalistiki,
-			tropPelatis;
-	private Boolean flag;
-	private JComboBox<String> eidikotitaTexnikouCB;
-	private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsiPelatiLB,
-			atPelatiLB,asfalistikhLB,tropPelatiLB,onomaTropLB,epithetoTropLB,dieythinsiTropLB,
-			thlTropLB,atTropLB,label_36,label_37, label_38,label_39,label_40,label_41;
-	
-	// vector pelates
+	panelNewGrammateas,panelDiathesimotita;
+private JMenuBar menuBar;
+private JMenu pelatis, ypalliloi, kataxwrhshYpallilwn, ergasies, exit,
+	save;
+private JMenuItem egrPelatiMenuItem, tropPelatiMenuItem,
+	printPelatiMenuItem, saveAllMenuItem, exodosMenuItem,
+	newTexnikosMenuItem, diathesimotitaMenuItem, newGrammateasMenuItem,
+	programErgMenuItem, ektypwsiErgMenuItem, diekperaiwshErgMenuItem;
+private JTextField onomaTextField, epithetoTextField, dieythinsiTextField,
+	thlTextField, ATTextField, tropPelatisTF, onomaTropTF, epithetoTropTF, dieythinsiTropTF,
+	thlTropTF, ATTropTF, onomaTexnikouTF, epithetoTexnikouTF,
+	dieythinsiTexnikouTF, thlTexnikouTF, atTexnikouTF, meraTF, mhnasTF,
+	etosTF, apoWraTF, apoLeptaTF, ewsWraTF, ewsLeptaTF, asfalTextField, atDiathesimotitaTF,onomaDiathesimotitaTF,
+	epithetoDiathesimotitaTF,gramOnomaTF,gramDieythinsiTF,gramEpithetoTF,
+	gramThlTF,gramAtTF;
+private JButton addpelatiButton, clearpelatiFormButton, tropopoihshButton,
+	esgTexnikosButton,
+	anazitisiatDiathesimotitaButton, addDiathesimotitaButton,
+	searchTropButton, clearTexnikosFormButton,
+	 eisagwsiGramButton,clearGrammForm;
+private String onoma, epitheto, dieythinsi, thl, AT, asfalistiki,
+	tropPelatis;
+private Boolean flag;
+private JComboBox<String> eidikotitaTexnikouCB;
+private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsiPelatiLB,
+	atPelatiLB,asfalistikhLB,tropPelatiLB,onomaTropLB,epithetoTropLB,dieythinsiTropLB,
+	thlTropLB,atTropLB,labelDiathesimotita,labelTexnikos,label_36,label_37, label_38,label_39,label_40,label_41;
+// vector pelates
 	Vector<Customer> customers = new Vector<Customer>();
 	// vector ypallhloi
 	Vector<Employee> employees = new Vector<Employee>();
@@ -374,6 +376,117 @@ public class SynergeioMain extends JFrame implements ActionListener {
 		atTexnikouTF.setColumns(10);
 		panelNewTexnikos.add(atTexnikouTF);
 
+		//Panel Diathesimotita
+				panelDiathesimotita = new JPanel();
+				panelDiathesimotita.setBackground(new Color(255, 255, 224));
+				cards.add(panelDiathesimotita, "Diathesimotita Texnikou");
+				panelDiathesimotita.setLayout(null);
+
+				JLabel label_17 = new JLabel("Διαθεσιμότητα Τεχνικού");
+				label_17.setFont(new Font("Book Antiqua", Font.PLAIN, 22));
+				label_17.setBounds(149, 0, 281, 37);
+				panelDiathesimotita.add(label_17);
+
+				atDiathesimotitaTF = new JTextField();
+				atDiathesimotitaTF.setColumns(10);
+				atDiathesimotitaTF.setBounds(10, 78, 111, 20);
+				panelDiathesimotita.add(atDiathesimotitaTF);
+
+				labelTexnikos = new JLabel("Τεχνικός :");
+				labelTexnikos.setBounds(10, 114, 60, 14);
+				panelDiathesimotita.add(labelTexnikos);
+
+				onomaDiathesimotitaTF = new JTextField();
+				onomaDiathesimotitaTF.setEditable(false);
+				onomaDiathesimotitaTF.setColumns(10);
+				onomaDiathesimotitaTF.setBounds(62, 109, 86, 20);
+				panelDiathesimotita.add(onomaDiathesimotitaTF);
+
+				epithetoDiathesimotitaTF = new JTextField();
+				epithetoDiathesimotitaTF.setEditable(false);
+				epithetoDiathesimotitaTF.setColumns(10);
+				epithetoDiathesimotitaTF.setBounds(158, 109, 99, 20);
+				panelDiathesimotita.add(epithetoDiathesimotitaTF);
+
+				labelDiathesimotita = new JLabel(
+						"Εισάγετε τον Αρ. Ταυτότητας Τεχνικού για να προσθέσετε νέα διαθεσιμότητα :");
+				labelDiathesimotita.setBounds(10, 59, 467, 14);
+				panelDiathesimotita.add(labelDiathesimotita);
+
+				meraTF = new JTextField();
+				meraTF.setBounds(116, 157, 39, 20);
+				panelDiathesimotita.add(meraTF);
+				meraTF.setColumns(10);
+
+				JLabel lblNewLabel_4 = new JLabel("ΗΗ/ΜΜ/ΕΕΕΕ");
+				lblNewLabel_4.setBounds(10, 160, 96, 14);
+				panelDiathesimotita.add(lblNewLabel_4);
+
+				mhnasTF = new JTextField();
+				mhnasTF.setColumns(10);
+				mhnasTF.setBounds(184, 157, 39, 20);
+				panelDiathesimotita.add(mhnasTF);
+
+				etosTF = new JTextField();
+				etosTF.setColumns(10);
+				etosTF.setBounds(244, 157, 53, 20);
+				panelDiathesimotita.add(etosTF);
+
+				JLabel label_18 = new JLabel("/");
+				label_18.setBounds(163, 160, 11, 14);
+				panelDiathesimotita.add(label_18);
+
+				JLabel label_19 = new JLabel("/");
+				label_19.setBounds(233, 160, 11, 14);
+				panelDiathesimotita.add(label_19);
+
+				JLabel label_20 = new JLabel("πχ. 25/ 01 /2013");
+				label_20.setBounds(321, 160, 96, 14);
+				panelDiathesimotita.add(label_20);
+
+				JLabel label_21 = new JLabel("Από Ώρα (ΩΩ:ΛΛ)");
+				label_21.setBounds(10, 202, 96, 14);
+				panelDiathesimotita.add(label_21);
+
+				apoWraTF = new JTextField();
+				apoWraTF.setBounds(116, 199, 23, 20);
+				panelDiathesimotita.add(apoWraTF);
+				apoWraTF.setColumns(10);
+
+				JLabel label_22 = new JLabel(":");
+				label_22.setBounds(149, 202, 6, 14);
+				panelDiathesimotita.add(label_22);
+
+				apoLeptaTF = new JTextField();
+				apoLeptaTF.setColumns(10);
+				apoLeptaTF.setBounds(159, 199, 23, 20);
+				panelDiathesimotita.add(apoLeptaTF);
+
+				JLabel label_23 = new JLabel("Έως Ώρα (ΩΩ:ΛΛ)");
+				label_23.setBounds(10, 245, 96, 14);
+				panelDiathesimotita.add(label_23);
+
+				JLabel label_24 = new JLabel(":");
+				label_24.setBounds(149, 242, 6, 14);
+				panelDiathesimotita.add(label_24);
+
+				ewsWraTF = new JTextField();
+				ewsWraTF.setColumns(10);
+				ewsWraTF.setBounds(116, 239, 23, 20);
+				panelDiathesimotita.add(ewsWraTF);
+
+				ewsLeptaTF = new JTextField();
+				ewsLeptaTF.setColumns(10);
+				ewsLeptaTF.setBounds(159, 239, 23, 20);
+				panelDiathesimotita.add(ewsLeptaTF);
+
+				JLabel label_25 = new JLabel("πχ. 16:30");
+				label_25.setBounds(192, 245, 64, 14);
+				panelDiathesimotita.add(label_25);
+
+				JLabel label_26 = new JLabel("πχ. 16:30");
+				label_26.setBounds(192, 202, 64, 14);
+				panelDiathesimotita.add(label_26);
 		
 		//Panel Grammateas
 		panelNewGrammateas = new JPanel();
@@ -510,7 +623,25 @@ public class SynergeioMain extends JFrame implements ActionListener {
 		clearTexnikosFormButton.setBounds(255, 253, 126, 23);
 		panelNewTexnikos.add(clearTexnikosFormButton);
 
-		
+		// *******************************Button kataxwrish Diathesimotitas Texnikou***************************//
+				addDiathesimotitaButton = new JButton("Καταχώρηση");
+				addDiathesimotitaButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						kataxwrhshDiathesimotitas();
+					}
+				});
+				addDiathesimotitaButton.setBounds(208, 297, 117, 23);
+				panelDiathesimotita.add(addDiathesimotitaButton);
+
+				// ***************************Button anazhthsh AT texnikou gia Diathesimotita*****************************//
+				anazitisiatDiathesimotitaButton = new JButton("Αναζήτηση");
+				anazitisiatDiathesimotitaButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+						anazitisiAtDiathseimotita();
+					}
+				});
+				anazitisiatDiathesimotitaButton.setBounds(131, 77, 117, 23);
+				panelDiathesimotita.add(anazitisiatDiathesimotitaButton);
 	
 
 		//****************************Button eisagwghs Grammatea*************************************************//
@@ -626,46 +757,54 @@ public class SynergeioMain extends JFrame implements ActionListener {
 
 	
 	// *********************************Methodos Eisagwghs Texnikou**********************************************************//
-	public void eisagwghTexnikou() {
-		flag=true;
-		onoma = onomaTexnikouTF.getText();
-		epitheto = epithetoTexnikouTF.getText();
-		dieythinsi = dieythinsiTexnikouTF.getText();
-		thl = thlTexnikouTF.getText();
-		AT = atTexnikouTF.getText();
-		int eidikotita = eidikotitaTexnikouCB.getSelectedIndex();
-		
-		for (Employee emplo : employees) {
-			if (AT.compareTo(emplo.getAT()) == 0) {
-				JOptionPane.showMessageDialog(cards,
-						"Ο αριθμός ταυτότητας τεχνικού υπάρχει ήδη!",
-						"Ο τεχνικός υπάρχει!", JOptionPane.ERROR_MESSAGE);
-				flag = false;
+		public void eisagwghTexnikou() {
+			flag=true;
+			onoma = onomaTexnikouTF.getText();
+			epitheto = epithetoTexnikouTF.getText();
+			dieythinsi = dieythinsiTexnikouTF.getText();
+			thl = thlTexnikouTF.getText();
+			AT = atTexnikouTF.getText();
+			int eidikotita = eidikotitaTexnikouCB.getSelectedIndex();
+			
+			for (Employee emplo : employees) {
+				if (AT.compareTo(emplo.getAT()) == 0) {
+					JOptionPane.showMessageDialog(cards,
+							"Ο αριθμός ταυτότητας τεχνικού υπάρχει ήδη!",
+							"Ο τεχνικός υπάρχει!", JOptionPane.ERROR_MESSAGE);
+					flag = false;
+				}
+			}
+			if (flag == true) {
+			// Dhmiourgeia texnikou
+			Texnikos t = null;
+			// An einai Hlektrologos
+			if (eidikotita == 0) {
+				t = new Hlektrologos(onoma, epitheto, dieythinsi, thl, AT);
+			}
+			// An einai Mhxanikow
+			else if (eidikotita == 1) {
+				t = new Mixanikos(onoma, epitheto, dieythinsi, thl, AT);
+
+			}
+			// An einai fanopoios
+			else if (eidikotita == 2) {
+				t = new Fanopoios(onoma, epitheto, dieythinsi, thl, AT);
+			}
+			employees.add(t);
+			JOptionPane.showMessageDialog(cards,
+					"Ο τεχνικός καταχωρήθηκε.Προσθέστε τις διαθέσιμες ώρες του.",
+					"Καταχώρηση τεχνικού", JOptionPane.INFORMATION_MESSAGE);
+			diathesimotitaTexikou = t;
+			labelDiathesimotita.setVisible(false);
+			atDiathesimotitaTF.setVisible(false);
+			labelTexnikos.setVisible(false);
+			onomaDiathesimotitaTF.setVisible(false);
+			epithetoDiathesimotitaTF.setVisible(false);
+			anazitisiatDiathesimotitaButton.setVisible(false);
+			((CardLayout) cards.getLayout()).show(cards, "Diathesimotita Texnikou");
 			}
 		}
-		if (flag == true) {
-		// Dhmiourgeia texnikou
-		Texnikos t = null;
-		// An einai Hlektrologos
-		if (eidikotita == 0) {
-			t = new Hlektrologos(onoma, epitheto, dieythinsi, thl, AT);
-		}
-		// An einai Mhxanikow
-		else if (eidikotita == 1) {
-			t = new Mixanikos(onoma, epitheto, dieythinsi, thl, AT);
-
-		}
-		// An einai fanopoios
-		else if (eidikotita == 2) {
-			t = new Fanopoios(onoma, epitheto, dieythinsi, thl, AT);
-		}
-		employees.add(t);
-		JOptionPane.showMessageDialog(cards,
-				"Ο τεχνικός καταχωρήθηκε.",
-				"Καταχώρηση τεχνικού", JOptionPane.INFORMATION_MESSAGE);
 		
-		}
-	}
 //*************************************Methodos Eisagwghs Grammatea***********************************//
 	public void eisagwgiGrammatea() {
 		// Methodos eisagwgh Pelati
@@ -694,7 +833,85 @@ public class SynergeioMain extends JFrame implements ActionListener {
 		}
 	}
 	
+	// ************************************Methodos Kataxwrhshs Diathesimotitas***********************************//
+		public void kataxwrhshDiathesimotitas() {
+
+			// Calendar cal=new GregorianCalendar();
+			int etos = Integer.parseInt(etosTF.getText());
+			int mhnas = Integer.parseInt(mhnasTF.getText()) - 1; // sth Java oi mhnes xekinoun apo 0
+																	// gi auto afairoume -1
+			int mera = Integer.parseInt(meraTF.getText());
+			int wraApo = Integer.parseInt(apoWraTF.getText());
+			int leptaApo = Integer.parseInt(apoLeptaTF.getText());
+			int wraEos = Integer.parseInt(ewsWraTF.getText());
+			int leptaEos = Integer.parseInt(ewsLeptaTF.getText());
+
+			// dhmioyrgia diathesimotitas gia ton texniti
+			Diathesimotita a = new Diathesimotita(etos, mhnas, mera, wraApo,
+					leptaApo, wraEos, leptaEos);
+			diathesimotitaTexikou.addToDiathesimotita(a);
+			JOptionPane.showMessageDialog(cards,
+					"Επιτυχής Καταχώρηση Διαθεσιμότητας.",
+					"Καταχώρηση Διαθεσιμότητας", JOptionPane.INFORMATION_MESSAGE);
+			Object[] options = { "Ναί", "Όχι" };
+			int option = JOptionPane
+					.showOptionDialog(
+							cards,
+							"Θέλετε να καταχωρήσετε άλλη ημερομηνία διαθεσιμότητας για τον τεχνικό;",
+							"Νέα καταχώρηση διαθεσιμότητας",
+							JOptionPane.DEFAULT_OPTION,
+							JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+			if (option == JOptionPane.OK_OPTION) {
+				etosTF.setText("");
+				mhnasTF.setText("");
+				meraTF.setText("");
+				apoWraTF.setText("");
+				apoLeptaTF.setText("");
+				ewsWraTF.setText("");
+				ewsLeptaTF.setText("");
+				((CardLayout) cards.getLayout()).show(cards,
+						"Diathesimotita Texnikou");
+			} else {
+				clearTexnikosFormButton.doClick();
+				etosTF.setText("");
+				mhnasTF.setText("");
+				meraTF.setText("");
+				apoWraTF.setText("");
+				apoLeptaTF.setText("");
+				ewsWraTF.setText("");
+				ewsLeptaTF.setText("");
+				atDiathesimotitaTF.setText("");
+				onomaDiathesimotitaTF.setText("");
+				epithetoDiathesimotitaTF.setText("");
+				((CardLayout) cards.getLayout()).show(cards, "Arxikh");
+			}
+		}
 	
+	// **********************************Methodos Anazhthshs AT Texnikou gia Diathesimotita*********************************//
+		public void anazitisiAtDiathseimotita() {
+			flag = false;
+			String at = atDiathesimotitaTF.getText();
+			// Texnikos t = null;
+			// anazhthsh texnikou
+			for (int i = 0; i < employees.size(); i++) {
+				if (employees.get(i) instanceof Texnikos) {
+					if (employees.get(i).getAT().equals(at)) {
+						diathesimotitaTexikou = (Texnikos) employees.get(i);
+						onomaDiathesimotitaTF.setText(employees.get(i).getOnoma());
+						epithetoDiathesimotitaTF.setText(employees.get(i)
+								.getEpitheto());
+						flag = true;
+						break;
+					}
+				}
+			}
+			if (flag == false) {
+				JOptionPane.showMessageDialog(cards,
+						"Τα στοιχεία που δώσατε δεν αντιστοιχούν σε Τεχνικό",
+						"Ο τεχνικός δε βρέθηκε!", JOptionPane.ERROR_MESSAGE);
+			}
+		}
+
 
 
 		
@@ -716,6 +933,15 @@ public class SynergeioMain extends JFrame implements ActionListener {
 						
 		} else if (e.getSource() == newTexnikosMenuItem) {
 			((CardLayout) cards.getLayout()).show(cards, "New Texnikos");
+		} else if (e.getSource() == diathesimotitaMenuItem) {
+			labelDiathesimotita.setVisible(true);
+			atDiathesimotitaTF.setVisible(true);
+			labelTexnikos.setVisible(true);
+			onomaDiathesimotitaTF.setVisible(true);
+			epithetoDiathesimotitaTF.setVisible(true);
+			anazitisiatDiathesimotitaButton.setVisible(true);
+			((CardLayout) cards.getLayout()).show(cards,
+					"Diathesimotita Texnikou");
 					
 		} else if (e.getSource() == newGrammateasMenuItem) {
 			((CardLayout) cards.getLayout()).show(cards, "New Grammateas");
