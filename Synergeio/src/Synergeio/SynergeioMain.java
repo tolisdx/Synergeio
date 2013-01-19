@@ -17,6 +17,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
@@ -24,35 +25,39 @@ import javax.swing.border.EmptyBorder;
 
 public class SynergeioMain extends JFrame implements ActionListener {
 
-	private JPanel cards, panelEgrPelati, panelTropPelati,panelNewTexnikos,
-	panelNewGrammateas,panelDiathesimotita;
-private JMenuBar menuBar;
-private JMenu pelatis, ypalliloi, kataxwrhshYpallilwn, ergasies, exit,
-	save;
-private JMenuItem egrPelatiMenuItem, tropPelatiMenuItem,
-	printPelatiMenuItem, saveAllMenuItem, exodosMenuItem,
-	newTexnikosMenuItem, diathesimotitaMenuItem, newGrammateasMenuItem,
-	programErgMenuItem, ektypwsiErgMenuItem, diekperaiwshErgMenuItem;
-private JTextField onomaTextField, epithetoTextField, dieythinsiTextField,
-	thlTextField, ATTextField, tropPelatisTF, onomaTropTF, epithetoTropTF, dieythinsiTropTF,
-	thlTropTF, ATTropTF, onomaTexnikouTF, epithetoTexnikouTF,
-	dieythinsiTexnikouTF, thlTexnikouTF, atTexnikouTF, meraTF, mhnasTF,
-	etosTF, apoWraTF, apoLeptaTF, ewsWraTF, ewsLeptaTF, asfalTextField, atDiathesimotitaTF,onomaDiathesimotitaTF,
-	epithetoDiathesimotitaTF,gramOnomaTF,gramDieythinsiTF,gramEpithetoTF,
-	gramThlTF,gramAtTF;
-private JButton addpelatiButton, clearpelatiFormButton, tropopoihshButton,
-	esgTexnikosButton,
-	anazitisiatDiathesimotitaButton, addDiathesimotitaButton,
-	searchTropButton, clearTexnikosFormButton,
-	 eisagwsiGramButton,clearGrammForm;
-private String onoma, epitheto, dieythinsi, thl, AT, asfalistiki,
-	tropPelatis;
-private Boolean flag;
-private JComboBox<String> eidikotitaTexnikouCB;
-private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsiPelatiLB,
-	atPelatiLB,asfalistikhLB,tropPelatiLB,onomaTropLB,epithetoTropLB,dieythinsiTropLB,
-	thlTropLB,atTropLB,labelDiathesimotita,labelTexnikos,label_36,label_37, label_38,label_39,label_40,label_41;
-// vector pelates
+	private JPanel cards, panelEgrPelati, panelTropPelati,panelEktPelati, panelNewTexnikos,
+			panelNewGrammateas,panelDiathesimotita;
+	private JMenuBar menuBar;
+	private JMenu pelatis, ypalliloi, kataxwrhshYpallilwn, ergasies, exit,
+			save;
+	private JMenuItem egrPelatiMenuItem, tropPelatiMenuItem,
+			printPelatiMenuItem, saveAllMenuItem, exodosMenuItem,
+			newTexnikosMenuItem, diathesimotitaMenuItem, newGrammateasMenuItem,
+			programErgMenuItem, ektypwsiErgMenuItem, diekperaiwshErgMenuItem;
+	private JTextField onomaTextField, epithetoTextField, dieythinsiTextField,
+			thlTextField, ATTextField, tropPelatisTF, onomaprintTF,
+			epithetoprintTF, dieythinsiprintTF, thlprintTF, ATprintTF,
+			printPelatisTF, onomaTropTF, epithetoTropTF, dieythinsiTropTF,
+			thlTropTF, ATTropTF, onomaTexnikouTF, epithetoTexnikouTF,
+			dieythinsiTexnikouTF, thlTexnikouTF, atTexnikouTF, meraTF, mhnasTF,
+			etosTF, apoWraTF, apoLeptaTF, ewsWraTF, ewsLeptaTF, asfalTextField, atDiathesimotitaTF,onomaDiathesimotitaTF,
+			epithetoDiathesimotitaTF,gramOnomaTF,gramDieythinsiTF,gramEpithetoTF,
+			gramThlTF,gramAtTF;
+	private JButton addpelatiButton, clearpelatiFormButton, tropopoihshButton,
+			printPelatisButton, esgTexnikosButton,
+			anazitisiatDiathesimotitaButton, addDiathesimotitaButton,
+			searchTropButton, clearTexnikosFormButton,
+			 eisagwsiGramButton,clearGrammForm;
+	private String onoma, epitheto, dieythinsi, thl, AT, asfalistiki,
+			printPelatis, tropPelatis;
+	private Boolean flag;
+	private JComboBox<String> eidikotitaTexnikouCB;
+	private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsiPelatiLB,
+			atPelatiLB,asfalistikhLB,tropPelatiLB,onomaTropLB,epithetoTropLB,dieythinsiTropLB,
+			thlTropLB,atTropLB,onomaPrintLB,epithetoPrintLB,dieythinsiPrintLB,thlPrintLB,atPrintLB,
+			printLB,labelDiathesimotita,labelTexnikos,label_36,label_37, label_38,label_39,label_40,label_41;
+	
+	// vector pelates
 	Vector<Customer> customers = new Vector<Customer>();
 	// vector ypallhloi
 	Vector<Employee> employees = new Vector<Employee>();
@@ -308,7 +313,71 @@ private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsi
 		ATTropTF.setBounds(281, 249, 99, 20);
 		panelTropPelati.add(ATTropTF);
 
-		
+		//Panel Ektypwshs Pelati
+		panelEktPelati = new JPanel();
+		panelEktPelati.setBackground(new Color(255, 255, 224));
+		cards.add(panelEktPelati, "Ektypwsi Pelati");
+		panelEktPelati.setLayout(null);
+
+		onomaPrintLB = new JLabel("Όνομα");
+		onomaPrintLB.setBounds(10, 126, 65, 14);
+		panelEktPelati.add(onomaPrintLB);
+
+		onomaprintTF = new JTextField();
+		onomaprintTF.setEditable(false);
+		onomaprintTF.setColumns(10);
+		onomaprintTF.setBounds(96, 123, 86, 20);
+		panelEktPelati.add(onomaprintTF);
+
+		epithetoprintTF = new JTextField();
+		epithetoprintTF.setEditable(false);
+		epithetoprintTF.setColumns(10);
+		epithetoprintTF.setBounds(96, 149, 86, 20);
+		panelEktPelati.add(epithetoprintTF);
+
+		epithetoPrintLB = new JLabel("Επίθετο");
+		epithetoPrintLB.setBounds(10, 152, 46, 14);
+		panelEktPelati.add(epithetoPrintLB);
+
+		dieythinsiPrintLB = new JLabel("Διεύθυνση");
+		dieythinsiPrintLB.setBounds(10, 190, 65, 14);
+		panelEktPelati.add(dieythinsiPrintLB);
+
+		dieythinsiprintTF = new JTextField();
+		dieythinsiprintTF.setEditable(false);
+		dieythinsiprintTF.setColumns(10);
+		dieythinsiprintTF.setBounds(96, 187, 86, 20);
+		panelEktPelati.add(dieythinsiprintTF);
+
+		thlprintTF = new JTextField();
+		thlprintTF.setEditable(false);
+		thlprintTF.setColumns(10);
+		thlprintTF.setBounds(96, 229, 86, 20);
+		panelEktPelati.add(thlprintTF);
+
+		thlPrintLB = new JLabel("Τηλέφωνο");
+		thlPrintLB.setBounds(10, 232, 65, 14);
+		panelEktPelati.add(thlPrintLB);
+
+		atPrintLB = new JLabel("Αρ. Ταυτότητας");
+		atPrintLB.setBounds(10, 274, 76, 14);
+		panelEktPelati.add(atPrintLB);
+
+		ATprintTF = new JTextField();
+		ATprintTF.setEditable(false);
+		ATprintTF.setColumns(10);
+		ATprintTF.setBounds(96, 271, 86, 20);
+		panelEktPelati.add(ATprintTF);
+
+		printLB = new JLabel("Εισάγετε τον Αρ. Ταυτότητας Πελάτη που θέλετε να εκτυπώσετε :");
+		printLB.setBounds(10, 57, 409, 14);
+		panelEktPelati.add(printLB);
+
+		printPelatisTF = new JTextField();
+		printPelatisTF.setColumns(10);
+		printPelatisTF.setBounds(10, 76, 111, 20);
+		panelEktPelati.add(printPelatisTF);
+				
 		//Panel Neos Texnikos
 		panelNewTexnikos = new JPanel();
 		panelNewTexnikos.setBackground(new Color(255, 255, 224));
@@ -597,7 +666,16 @@ private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsi
 		tropopoihshButton.setBounds(200, 297, 118, 23);
 		panelTropPelati.add(tropopoihshButton);
 
-		
+		// ******************************Button Ektypwsh pelati***********************************//
+				printPelatisButton = new JButton("Εκτύπωση");
+				printPelatisButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent arg0) {
+						ektypwshPelati();
+					}
+				});
+				printPelatisButton.setBounds(136, 75, 102, 23);
+				panelEktPelati.add(printPelatisButton);
+				
 		// ********************************Button Eisagwghs Stoixeiwn Texnikou**************************************//
 		esgTexnikosButton = new JButton("Εισαγωγή");
 		esgTexnikosButton.setBounds(171, 253, 79, 23);
@@ -755,7 +833,32 @@ private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsi
 		}
 	}
 
-	
+	// **********************************Methodos Ektypwsh Pelati*************************************************************//
+		public void ektypwshPelati() {
+			// εκτύπωση στοιχείων πελάτη
+			flag = false;
+			printPelatis = printPelatisTF.getText();
+			// αναζήτηση στους πελάτες και εκτύπωση αυτού που ζητήθηκε
+			for (Customer element : customers) {
+				if (printPelatis.compareTo(element.getAT()) == 0) {
+					onomaprintTF.setText(element.getOnoma());
+					epithetoprintTF.setText(element.getEpitheto());
+					dieythinsiprintTF.setText(element.getDieythinsi());
+					thlprintTF.setText(element.getThl());
+					ATprintTF.setText(element.getAT());
+
+					flag = true;
+				}
+			}
+
+			// an o pelatis de vrethike msg
+			if (flag == false) {
+				JOptionPane.showMessageDialog(cards,
+						"Τα στοιχεία που δώσατε δεν αντιστοιχούν σε πελάτη",
+						"Ο πελάτης δε βρέθηκε!", JOptionPane.ERROR_MESSAGE);
+			}
+		}
+		
 	// *********************************Methodos Eisagwghs Texnikou**********************************************************//
 		public void eisagwghTexnikou() {
 			flag=true;
@@ -930,7 +1033,7 @@ private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsi
 			
 			((CardLayout) cards.getLayout()).show(cards, "Tropopoihsh Pelati");
 		} else if (e.getSource() == printPelatiMenuItem) {
-						
+			((CardLayout) cards.getLayout()).show(cards, "Ektypwsi Pelati");			
 		} else if (e.getSource() == newTexnikosMenuItem) {
 			((CardLayout) cards.getLayout()).show(cards, "New Texnikos");
 		} else if (e.getSource() == diathesimotitaMenuItem) {
