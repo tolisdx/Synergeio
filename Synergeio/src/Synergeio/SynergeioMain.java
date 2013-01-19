@@ -6,6 +6,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Calendar;
 import java.util.Vector;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
@@ -17,7 +18,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
@@ -25,39 +25,39 @@ import javax.swing.border.EmptyBorder;
 
 public class SynergeioMain extends JFrame implements ActionListener {
 
-	private JPanel cards, panelEgrPelati, panelTropPelati,panelEktPelati, panelNewTexnikos,
-			panelNewGrammateas,panelDiathesimotita;
-	private JMenuBar menuBar;
-	private JMenu pelatis, ypalliloi, kataxwrhshYpallilwn, ergasies, exit,
-			save;
-	private JMenuItem egrPelatiMenuItem, tropPelatiMenuItem,
-			printPelatiMenuItem, saveAllMenuItem, exodosMenuItem,
-			newTexnikosMenuItem, diathesimotitaMenuItem, newGrammateasMenuItem,
-			programErgMenuItem, ektypwsiErgMenuItem, diekperaiwshErgMenuItem;
-	private JTextField onomaTextField, epithetoTextField, dieythinsiTextField,
-			thlTextField, ATTextField, tropPelatisTF, onomaprintTF,
-			epithetoprintTF, dieythinsiprintTF, thlprintTF, ATprintTF,
-			printPelatisTF, onomaTropTF, epithetoTropTF, dieythinsiTropTF,
-			thlTropTF, ATTropTF, onomaTexnikouTF, epithetoTexnikouTF,
-			dieythinsiTexnikouTF, thlTexnikouTF, atTexnikouTF, meraTF, mhnasTF,
-			etosTF, apoWraTF, apoLeptaTF, ewsWraTF, ewsLeptaTF, asfalTextField, atDiathesimotitaTF,onomaDiathesimotitaTF,
-			epithetoDiathesimotitaTF,gramOnomaTF,gramDieythinsiTF,gramEpithetoTF,
-			gramThlTF,gramAtTF;
-	private JButton addpelatiButton, clearpelatiFormButton, tropopoihshButton,
-			printPelatisButton, esgTexnikosButton,
-			anazitisiatDiathesimotitaButton, addDiathesimotitaButton,
-			searchTropButton, clearTexnikosFormButton,
-			 eisagwsiGramButton,clearGrammForm;
-	private String onoma, epitheto, dieythinsi, thl, AT, asfalistiki,
-			printPelatis, tropPelatis;
-	private Boolean flag;
-	private JComboBox<String> eidikotitaTexnikouCB;
-	private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsiPelatiLB,
-			atPelatiLB,asfalistikhLB,tropPelatiLB,onomaTropLB,epithetoTropLB,dieythinsiTropLB,
-			thlTropLB,atTropLB,onomaPrintLB,epithetoPrintLB,dieythinsiPrintLB,thlPrintLB,atPrintLB,
-			printLB,labelDiathesimotita,labelTexnikos,label_36,label_37, label_38,label_39,label_40,label_41;
-	
-	// vector pelates
+private JPanel cards, panelEgrPelati, panelTropPelati,panelEktPelati, panelNewTexnikos,
+	panelNewGrammateas,panelDiathesimotita, panelProgramErgasia;
+private JMenuBar menuBar;
+private JMenu pelatis, ypalliloi, kataxwrhshYpallilwn, ergasies, exit,
+	save;
+private JMenuItem egrPelatiMenuItem, tropPelatiMenuItem,
+	printPelatiMenuItem, saveAllMenuItem, exodosMenuItem,
+	newTexnikosMenuItem, diathesimotitaMenuItem, newGrammateasMenuItem,
+	programErgMenuItem, ektypwsiErgMenuItem, diekperaiwshErgMenuItem;
+private JTextField onomaTextField, epithetoTextField, dieythinsiTextField,
+	thlTextField, ATTextField, tropPelatisTF, onomaprintTF,
+	epithetoprintTF, dieythinsiprintTF, thlprintTF, ATprintTF,
+	printPelatisTF, onomaTropTF, epithetoTropTF, dieythinsiTropTF,
+	thlTropTF, ATTropTF, onomaTexnikouTF, epithetoTexnikouTF,
+	dieythinsiTexnikouTF, thlTexnikouTF, atTexnikouTF, meraTF, mhnasTF,
+	etosTF, apoWraTF, apoLeptaTF, ewsWraTF, ewsLeptaTF, atProgErgTF,
+	onomaTF, epithetoTF, asfalTextField, atDiathesimotitaTF,onomaDiathesimotitaTF,
+	epithetoDiathesimotitaTF,gramOnomaTF,gramDieythinsiTF,gramEpithetoTF,
+	gramThlTF,gramAtTF;
+private JButton addpelatiButton, clearpelatiFormButton, tropopoihshButton,
+	printPelatisButton, esgTexnikosButton,
+	anazitisiatDiathesimotitaButton, addDiathesimotitaButton,
+	searchAtProgErgButton, addErgasiaButton, searchTropButton, clearTexnikosFormButton,
+	 eisagwsiGramButton,clearGrammForm;
+private String onoma, epitheto, dieythinsi, thl, AT, asfalistiki,
+	printPelatis, tropPelatis, atProgErg;
+private Boolean flag, flag2;
+private JComboBox<String> eidikotitaTexnikouCB, eidosErgasiasCB;
+private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsiPelatiLB,
+	atPelatiLB,asfalistikhLB,tropPelatiLB,onomaTropLB,epithetoTropLB,dieythinsiTropLB,
+	thlTropLB,atTropLB,onomaPrintLB,epithetoPrintLB,dieythinsiPrintLB,thlPrintLB,atPrintLB,
+	printLB,labelDiathesimotita,labelTexnikos,label_36,label_37, label_38,label_39,label_40,label_41;
+// vector pelates
 	Vector<Customer> customers = new Vector<Customer>();
 	// vector ypallhloi
 	Vector<Employee> employees = new Vector<Employee>();
@@ -613,7 +613,47 @@ public class SynergeioMain extends JFrame implements ActionListener {
 		label_41.setBounds(10, 189, 100, 14);
 		panelNewGrammateas.add(label_41);
 
-	
+		//Panel programmatismos ergasias
+		panelProgramErgasia = new JPanel();
+		panelProgramErgasia.setBackground(new Color(255, 255, 224));
+		cards.add(panelProgramErgasia, "Programmatismos Ergasias");
+		panelProgramErgasia.setLayout(null);
+
+		JLabel label_27 = new JLabel("Εισάγετε τον Αρ. Ταυτότητας Πελάτη για τον οποίο θα προγραμματιστεί εργασία :");
+		label_27.setBounds(10, 79, 409, 14);
+		panelProgramErgasia.add(label_27);
+
+		atProgErgTF = new JTextField();
+		atProgErgTF.setColumns(10);
+		atProgErgTF.setBounds(10, 98, 111, 20);
+		panelProgramErgasia.add(atProgErgTF);
+
+		JLabel label_28 = new JLabel("Επιλογή Εργασίας :");
+		label_28.setBounds(10, 181, 99, 14);
+		panelProgramErgasia.add(label_28);
+
+		eidosErgasiasCB = new JComboBox<String>();
+		eidosErgasiasCB.setModel(new DefaultComboBoxModel<String>(new String[] {
+						"Αλλαγή Λαδιών", "Έλεγχος Φώτων", "Αλλαγή Φτερού" }));
+		eidosErgasiasCB.setBounds(136, 178, 117, 20);
+		panelProgramErgasia.add(eidosErgasiasCB);
+
+		JLabel label_29 = new JLabel("Πελάτης :");
+		label_29.setBounds(10, 134, 60, 14);
+		panelProgramErgasia.add(label_29);
+
+		onomaTF = new JTextField();
+		onomaTF.setEditable(false);
+		onomaTF.setBounds(62, 129, 86, 20);
+		panelProgramErgasia.add(onomaTF);
+		onomaTF.setColumns(10);
+
+		epithetoTF = new JTextField();
+		epithetoTF.setEditable(false);
+		epithetoTF.setColumns(10);
+		epithetoTF.setBounds(158, 129, 99, 20);
+		panelProgramErgasia.add(epithetoTF);
+
 
 		/************************************************************************************
 		 * Ta buttons ths efarmoghs
@@ -745,8 +785,31 @@ public class SynergeioMain extends JFrame implements ActionListener {
 		});
 		clearGrammForm.setBounds(254, 297, 126, 23);
 		panelNewGrammateas.add(clearGrammForm);
-	}
+	
+	
+	// ***************************Button anazhthsh AT pelati gia programmatismo ergasias*********************//
+			// anazhthsh AT pelati gia programmatismo ergasias
+			searchAtProgErgButton = new JButton("Αναζήτηση");
+			searchAtProgErgButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					anazitisiPelatiProgram();
+				}
+			});
+			searchAtProgErgButton.setBounds(136, 97, 117, 23);
+			panelProgramErgasia.add(searchAtProgErgButton);
 
+			// *******************************Button prosthiki ergasias ******************************//
+			addErgasiaButton = new JButton("Καταχώρηση Εργασίας");
+			addErgasiaButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					kataxwrhshErgasias();
+				}
+
+			});
+			addErgasiaButton.setBounds(191, 297, 167, 23);
+			panelProgramErgasia.add(addErgasiaButton);
+	}
+	
 	/*********************************************************************************
 	 * Methodoi Efarmoghs *
 	 *********************************************************************************/
@@ -1015,7 +1078,133 @@ public class SynergeioMain extends JFrame implements ActionListener {
 			}
 		}
 
+		// ************************************Methodos Anazitishs AT Pelati gia programmatismo ergasias*************************//
+		public void anazitisiPelatiProgram() {
+			// anazitish pelati gia kataxwrhsh ergasias
+			flag = false;
+			atProgErg = atProgErgTF.getText();
+			// Customer c = null;
+			// αναζήτηση στους πελάτες και εκτύπωση αυτού που ζητήθηκε
+			for (Customer element : customers) {
+				if (atProgErg.compareTo(element.getAT()) == 0) {
+					onomaTF.setText(element.getOnoma());
+					epithetoTF.setText(element.getEpitheto());
+					// c=(Customer) element;
+					flag = true;
+				}
 
+			}
+			// an o pelatis de vrethike msg
+			if (flag == false) {
+				JOptionPane.showMessageDialog(cards,
+						"Τα στοιχεία που δώσατε δεν αντιστοιχούν σε πελάτη",
+						"Ο πελάτης δε βρέθηκε!", JOptionPane.ERROR_MESSAGE);
+			}
+		}
+
+		// **********************************Methodos Kataxwrhshs Ergasias********************************************************//
+		public void kataxwrhshErgasias() {
+			// kataxwrhsh ergasias
+			flag = false;
+			flag2 = false;
+			atProgErg = atProgErgTF.getText();
+			Customer c = null;
+			// anazitish stous pelates
+			for (int i = 0; i < customers.size(); i++) {
+				if (customers.get(i).getAT().equals(atProgErg)) {
+					c = customers.get(i);
+					flag = true;
+					break;
+					/*
+					 * for (Customer element : customers) { if
+					 * (atProgErg.compareTo(element.getAT()) == 0) { c = (Customer)
+					 * element; flag = true;
+					 */
+				}
+			}
+			// an o pelatis vrethike
+			if (flag == true) {
+				Texnikos t;
+				Ergasia erg = null;
+				if (employees.isEmpty()) {
+					JOptionPane.showMessageDialog(cards,
+							"Δεν υπάρχουν τεχνικοί στο συνεργείο.",
+							"Δε βρέθηκε τεχικός", JOptionPane.INFORMATION_MESSAGE);
+				} else {
+					for (Employee emplo : employees) {
+						if (emplo instanceof Texnikos) { // an o ypallhlos einai
+															// texnikos
+							System.out.println(emplo.getAT());
+							t = (Texnikos) emplo;
+							Vector<Diathesimotita> av = t.getDiathesimotita();
+							if (!av.isEmpty()) {
+								flag2 = false;
+								// if(av.elements().)
+								for (int i = 0; i < av.size(); i++) {
+									// av.elements()
+									Calendar c1 = av.get(i).getGC1();
+									int h1 = c1.get(Calendar.HOUR_OF_DAY);
+									int m1 = c1.get(Calendar.MINUTE);
+
+									if (eidosErgasiasCB.getSelectedIndex() == 0)
+										// programmatismos allagis ladiwn
+										erg = new AllagiLadiwn(
+												c1.get(Calendar.YEAR),
+												c1.get(Calendar.MONTH),
+												c1.get(Calendar.DAY_OF_MONTH), h1,
+												m1);
+									else if (eidosErgasiasCB.getSelectedIndex() == 1)
+										// programmatismos allagis fwtwn
+										erg = new AllagiFwtwn(
+												c1.get(Calendar.YEAR),
+												c1.get(Calendar.MONTH),
+												c1.get(Calendar.DAY_OF_MONTH), h1,
+												m1);
+									else if (eidosErgasiasCB.getSelectedIndex() == 2)
+										// programmatismos allagis fterou
+										erg = new AllagiFterou(
+												c1.get(Calendar.YEAR),
+												c1.get(Calendar.MONTH),
+												c1.get(Calendar.DAY_OF_MONTH), h1,
+												m1);
+
+									// prosthiki ergasias se pelati kai texniko
+									c.addErgasia(erg);
+									t.addErgasia(erg);
+									System.out.println("tis prosthesa");
+									// diagrafi diathesimotitas apo ton texniko
+									t.removeFromDiathesimotita(i);
+									// break;
+								}
+								JOptionPane.showMessageDialog(cards,
+										"Η εργασία καταχωρήθηκε. ", "",
+										JOptionPane.INFORMATION_MESSAGE);
+								break;
+							} else {
+								flag2 = true;
+
+							}
+
+						}
+
+					}
+					if (flag2 == true) {
+						JOptionPane
+								.showMessageDialog(
+										cards,
+										"Δεν υπάρχει διαθέσιμος τεχνικός να εκτελέσει την εργασία.",
+										"Δε βρέθηκε διαθέσιμος τεχικός",
+										JOptionPane.INFORMATION_MESSAGE);
+					}
+				}
+			}
+			// an o pelatis de vrethike msg
+			if (flag == false) {
+				JOptionPane.showMessageDialog(cards,
+						"Τα στοιχεία που δώσατε δεν αντιστοιχούν σε πελάτη",
+						"Ο πελάτης δε βρέθηκε!", JOptionPane.ERROR_MESSAGE);
+			}
+		}
 
 		
 
@@ -1049,7 +1238,8 @@ public class SynergeioMain extends JFrame implements ActionListener {
 		} else if (e.getSource() == newGrammateasMenuItem) {
 			((CardLayout) cards.getLayout()).show(cards, "New Grammateas");
 		} else if (e.getSource() == programErgMenuItem) {
-			
+			((CardLayout) cards.getLayout()).show(cards,
+					"Programmatismos Ergasias");
 		} else if (e.getSource() == ektypwsiErgMenuItem) {
 			
 
