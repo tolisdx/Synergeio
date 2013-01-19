@@ -18,6 +18,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
@@ -25,8 +27,8 @@ import javax.swing.border.EmptyBorder;
 
 public class SynergeioMain extends JFrame implements ActionListener {
 
-private JPanel cards, panelEgrPelati, panelTropPelati,panelEktPelati, panelNewTexnikos,
-	panelNewGrammateas,panelDiathesimotita, panelProgramErgasia;
+	private JPanel cards, panelEgrPelati, panelTropPelati,panelEktPelati, panelNewTexnikos,
+	panelNewGrammateas,panelDiathesimotita, panelProgramErgasia, panelEktypwshErg;
 private JMenuBar menuBar;
 private JMenu pelatis, ypalliloi, kataxwrhshYpallilwn, ergasies, exit,
 	save;
@@ -41,13 +43,14 @@ private JTextField onomaTextField, epithetoTextField, dieythinsiTextField,
 	thlTropTF, ATTropTF, onomaTexnikouTF, epithetoTexnikouTF,
 	dieythinsiTexnikouTF, thlTexnikouTF, atTexnikouTF, meraTF, mhnasTF,
 	etosTF, apoWraTF, apoLeptaTF, ewsWraTF, ewsLeptaTF, atProgErgTF,
-	onomaTF, epithetoTF, asfalTextField, atDiathesimotitaTF,onomaDiathesimotitaTF,
+	onomaTF, epithetoTF, asfalTextField, atTexnikouPrintTF, onomaTexnikouPrintTF,
+	epithetoTexnikouPrintTF,atDiathesimotitaTF,onomaDiathesimotitaTF,
 	epithetoDiathesimotitaTF,gramOnomaTF,gramDieythinsiTF,gramEpithetoTF,
 	gramThlTF,gramAtTF;
 private JButton addpelatiButton, clearpelatiFormButton, tropopoihshButton,
 	printPelatisButton, esgTexnikosButton,
 	anazitisiatDiathesimotitaButton, addDiathesimotitaButton,
-	searchAtProgErgButton, addErgasiaButton, searchTropButton, clearTexnikosFormButton,
+	searchAtProgErgButton, addErgasiaButton, printErgButton, searchTropButton, clearTexnikosFormButton,
 	 eisagwsiGramButton,clearGrammForm;
 private String onoma, epitheto, dieythinsi, thl, AT, asfalistiki,
 	printPelatis, tropPelatis, atProgErg;
@@ -56,7 +59,9 @@ private JComboBox<String> eidikotitaTexnikouCB, eidosErgasiasCB;
 private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsiPelatiLB,
 	atPelatiLB,asfalistikhLB,tropPelatiLB,onomaTropLB,epithetoTropLB,dieythinsiTropLB,
 	thlTropLB,atTropLB,onomaPrintLB,epithetoPrintLB,dieythinsiPrintLB,thlPrintLB,atPrintLB,
-	printLB,labelDiathesimotita,labelTexnikos,label_36,label_37, label_38,label_39,label_40,label_41;
+	printLB,labelDiathesimotita,labelTexnikos,label_36,label_37, label_33, label_34,label_38,label_39,label_40,label_41;
+private JTextArea printErgtextArea;
+
 // vector pelates
 	Vector<Customer> customers = new Vector<Customer>();
 	// vector ypallhloi
@@ -654,6 +659,47 @@ private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsi
 		epithetoTF.setBounds(158, 129, 99, 20);
 		panelProgramErgasia.add(epithetoTF);
 
+		//Panel ektypwsh ergasias
+		panelEktypwshErg = new JPanel();
+		panelEktypwshErg.setBackground(new Color(255, 255, 224));
+		cards.add(panelEktypwshErg, "Ektypwsh Ergasiwn");
+		panelEktypwshErg.setLayout(null);
+
+		label_33 = new JLabel(
+				"Εισάγετε τον Αρ. Ταυτότητας Τεχνικού για να τυπώσετε τις προγραμματισμένες εργασίες του :");
+		label_33.setBounds(10, 34, 467, 14);
+		panelEktypwshErg.add(label_33);
+
+		atTexnikouPrintTF = new JTextField();
+		atTexnikouPrintTF.setColumns(10);
+		atTexnikouPrintTF.setBounds(10, 53, 111, 20);
+		panelEktypwshErg.add(atTexnikouPrintTF);
+
+		label_34 = new JLabel("Τεχνικός :");
+		label_34.setBounds(10, 89, 60, 14);
+		panelEktypwshErg.add(label_34);
+
+		onomaTexnikouPrintTF = new JTextField();
+		onomaTexnikouPrintTF.setEditable(false);
+		onomaTexnikouPrintTF.setColumns(10);
+		onomaTexnikouPrintTF.setBounds(62, 84, 86, 20);
+		panelEktypwshErg.add(onomaTexnikouPrintTF);
+
+		epithetoTexnikouPrintTF = new JTextField();
+		epithetoTexnikouPrintTF.setEditable(false);
+		epithetoTexnikouPrintTF.setColumns(10);
+		epithetoTexnikouPrintTF.setBounds(158, 84, 99, 20);
+		panelEktypwshErg.add(epithetoTexnikouPrintTF);
+
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 137, 594, 183);
+		panelEktypwshErg.add(scrollPane);
+
+		printErgtextArea = new JTextArea();
+		scrollPane.setViewportView(printErgtextArea);
+		printErgtextArea.setAutoscrolls(false);
+		printErgtextArea.setEditable(false);
+		printErgtextArea.setFont(new Font("Arial Black", Font.PLAIN, 12));
 
 		/************************************************************************************
 		 * Ta buttons ths efarmoghs
@@ -808,8 +854,18 @@ private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsi
 			});
 			addErgasiaButton.setBounds(191, 297, 167, 23);
 			panelProgramErgasia.add(addErgasiaButton);
-	}
 	
+	
+	// ********************************Button ektypwsh ergasiwn ******************************//
+			printErgButton = new JButton("Εκτύπωση");
+			printErgButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					ektypwshErgasiwn();
+				}
+			});
+			printErgButton.setBounds(205, 113, 111, 23);
+			panelEktypwshErg.add(printErgButton);
+	}
 	/*********************************************************************************
 	 * Methodoi Efarmoghs *
 	 *********************************************************************************/
@@ -1206,7 +1262,38 @@ private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsi
 			}
 		}
 
-		
+		// *********************************Methodos Ektypwsh Ergasiwn**************************************************//
+
+		public void ektypwshErgasiwn() {
+			// ektypwsh progrmmatismenw ergasiwn
+			printErgtextArea.setText("");
+			flag = false;
+			String at = atTexnikouPrintTF.getText();
+			Texnikos t = null;
+			// anazitish texnikou
+			for (int i = 0; i < employees.size(); i++) {
+				if (employees.get(i) instanceof Texnikos) {
+					if (employees.get(i).getAT().equals(at)) {
+						t = (Texnikos) employees.get(i);
+						onomaTexnikouPrintTF.setText(employees.get(i).getOnoma());
+						epithetoTexnikouPrintTF.setText(employees.get(i).getEpitheto());
+						flag = true;
+						break;
+					}
+				}
+			}
+			// an o texnikos vrethike ektypwsh twn ergasiwn pou anatehikan
+			if (flag == true) {
+				Vector<Ergasia> v = t.getErgasies();
+				for (int j = 0; j < v.size(); j++) {
+					printErgtextArea.append(v.get(j).toString() + "\n");
+				}
+			} else
+				JOptionPane.showMessageDialog(cards,
+						"Τα στοιχεία που δώσατε δεν αντιστοιχούν σε Τεχνικό",
+						"Ο τεχνικός δε βρέθηκε!", JOptionPane.ERROR_MESSAGE);
+		}
+
 
 	/***************************************************************************
 	 * Energeies twn menu ths efarmoghs
@@ -1241,7 +1328,7 @@ private JLabel synergeioLB,onomaPelatiLB,epithetoPelatiLB,thlPelatiLB,dieythinsi
 			((CardLayout) cards.getLayout()).show(cards,
 					"Programmatismos Ergasias");
 		} else if (e.getSource() == ektypwsiErgMenuItem) {
-			
+			((CardLayout) cards.getLayout()).show(cards, "Ektypwsh Ergasiwn");
 
 		} else if (e.getSource() == diekperaiwshErgMenuItem) {
 			
