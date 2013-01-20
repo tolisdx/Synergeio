@@ -6,8 +6,8 @@ import java.util.Vector;
 
 //afhrhmenh klash texnikos apo thn opoia klhronomoun ta eidh twn texnikwn
 public abstract class Texnikos extends Employee{
-	
-	private Vector<Diathesimotita> a = new Vector<Diathesimotita>();  //Vector diathesimwn hmeromhniwn
+    
+    private Vector<Diathesimotita> a = new Vector<Diathesimotita>();  //Vector diathesimwn hmeromhniwn
     private Vector<Ergasia> ergasies = new Vector<Ergasia>();  //Vector progrmmatismenwn ergasiwn
     private Vector<IstorikoErgasiwn> istoriko = new Vector<IstorikoErgasiwn>(); //Vector istorikou ergasiwn
     
@@ -65,5 +65,5 @@ public abstract class Texnikos extends Employee{
     public Vector<Diathesimotita> getDiathesimotita(){
         return a;
     }
-   
+
 }

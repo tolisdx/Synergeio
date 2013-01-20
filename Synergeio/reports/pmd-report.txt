@@ -1,0 +1,271 @@
+
+src/Synergeio/AllagiFterou.java:2	Package name contains upper case characters
+src/Synergeio/AllagiFterou.java:8	Parameter 'etos' is not assigned and could be declared final
+src/Synergeio/AllagiFterou.java:8	Parameter 'lepta' is not assigned and could be declared final
+src/Synergeio/AllagiFterou.java:8	Parameter 'mera' is not assigned and could be declared final
+src/Synergeio/AllagiFterou.java:8	Parameter 'mhnas' is not assigned and could be declared final
+src/Synergeio/AllagiFterou.java:8	Parameter 'wra' is not assigned and could be declared final
+src/Synergeio/AllagiFwtwn.java:2	Package name contains upper case characters
+src/Synergeio/AllagiFwtwn.java:8	Parameter 'etos' is not assigned and could be declared final
+src/Synergeio/AllagiFwtwn.java:8	Parameter 'lepta' is not assigned and could be declared final
+src/Synergeio/AllagiFwtwn.java:8	Parameter 'mera' is not assigned and could be declared final
+src/Synergeio/AllagiFwtwn.java:8	Parameter 'mhnas' is not assigned and could be declared final
+src/Synergeio/AllagiFwtwn.java:8	Parameter 'wra' is not assigned and could be declared final
+src/Synergeio/AllagiLadiwn.java:2	Package name contains upper case characters
+src/Synergeio/AllagiLadiwn.java:9	Parameter 'etos' is not assigned and could be declared final
+src/Synergeio/AllagiLadiwn.java:9	Parameter 'lepta' is not assigned and could be declared final
+src/Synergeio/AllagiLadiwn.java:9	Parameter 'mera' is not assigned and could be declared final
+src/Synergeio/AllagiLadiwn.java:9	Parameter 'mhnas' is not assigned and could be declared final
+src/Synergeio/AllagiLadiwn.java:9	Parameter 'wra' is not assigned and could be declared final
+src/Synergeio/Customer.java:2	Package name contains upper case characters
+src/Synergeio/Customer.java:9	Avoid excessively long variable names like asfalistikhEtairia
+src/Synergeio/Customer.java:11	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Customer.java:11	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Customer.java:11	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/Customer.java:11	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Customer.java:11	Private field 'ergasies' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/Customer.java:11	Use ArrayList instead of Vector
+src/Synergeio/Customer.java:13	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Customer.java:13	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Customer.java:13	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/Customer.java:13	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Customer.java:13	Private field 'istoriko' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/Customer.java:13	Use ArrayList instead of Vector
+src/Synergeio/Customer.java:16	Avoid variables with short names like AT
+src/Synergeio/Customer.java:16	Parameter 'AT' is not assigned and could be declared final
+src/Synergeio/Customer.java:16	Parameter 'asfalisikh' is not assigned and could be declared final
+src/Synergeio/Customer.java:16	Parameter 'dieythinsi' is not assigned and could be declared final
+src/Synergeio/Customer.java:16	Parameter 'epitheto' is not assigned and could be declared final
+src/Synergeio/Customer.java:16	Parameter 'onoma' is not assigned and could be declared final
+src/Synergeio/Customer.java:22	Avoid variables with short names like e
+src/Synergeio/Customer.java:27	Avoid variables with short names like e
+src/Synergeio/Customer.java:32	Avoid variables with short names like i
+src/Synergeio/Customer.java:37	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Customer.java:37	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Customer.java:37	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/Customer.java:42	Avoid variables with short names like h
+src/Synergeio/Diathesimotita.java:2	Package name contains upper case characters
+src/Synergeio/Diathesimotita.java:14	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Diathesimotita.java:14	Private field 'gc1' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/Diathesimotita.java:15	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Diathesimotita.java:15	Private field 'gc2' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/Diathesimotita.java:16	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Diathesimotita.java:16	Perhaps 'df1' could be replaced by a local variable.
+src/Synergeio/Diathesimotita.java:19	Parameter 'etos' is not assigned and could be declared final
+src/Synergeio/Diathesimotita.java:19	Parameter 'leptaend' is not assigned and could be declared final
+src/Synergeio/Diathesimotita.java:19	Parameter 'leptastart' is not assigned and could be declared final
+src/Synergeio/Diathesimotita.java:19	Parameter 'mera' is not assigned and could be declared final
+src/Synergeio/Diathesimotita.java:19	Parameter 'mhnas' is not assigned and could be declared final
+src/Synergeio/Diathesimotita.java:36	When instantiating a SimpleDateFormat object, specify a Locale
+src/Synergeio/Diathesimotita.java:37	Local variable 'formgc1' could be declared final
+src/Synergeio/Diathesimotita.java:38	Local variable 'formgc2' could be declared final
+src/Synergeio/Employee.java:3	Package name contains upper case characters
+src/Synergeio/Employee.java:9	Avoid variables with short names like AT
+src/Synergeio/Employee.java:9	Parameter 'AT' is not assigned and could be declared final
+src/Synergeio/Employee.java:9	Parameter 'dieythinsi' is not assigned and could be declared final
+src/Synergeio/Employee.java:9	Parameter 'epitheto' is not assigned and could be declared final
+src/Synergeio/Employee.java:9	Parameter 'onoma' is not assigned and could be declared final
+src/Synergeio/Employee.java:9	Parameter 'thl' is not assigned and could be declared final
+src/Synergeio/Ergasia.java:2	Package name contains upper case characters
+src/Synergeio/Ergasia.java:12	Abstract classes should be named AbstractXXX
+src/Synergeio/Ergasia.java:12	This abstract class does not have any abstract methods
+src/Synergeio/Ergasia.java:15	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Ergasia.java:15	Private field 'date' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/Ergasia.java:16	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Ergasia.java:16	Perhaps 'df1' could be replaced by a local variable.
+src/Synergeio/Ergasia.java:19	Parameter 'etos' is not assigned and could be declared final
+src/Synergeio/Ergasia.java:19	Parameter 'lepta' is not assigned and could be declared final
+src/Synergeio/Ergasia.java:19	Parameter 'mera' is not assigned and could be declared final
+src/Synergeio/Ergasia.java:19	Parameter 'mhnas' is not assigned and could be declared final
+src/Synergeio/Ergasia.java:19	Parameter 'wra' is not assigned and could be declared final
+src/Synergeio/Ergasia.java:31	When instantiating a SimpleDateFormat object, specify a Locale
+src/Synergeio/Ergasia.java:32	Local variable 'formdate' could be declared final
+src/Synergeio/Fanopoios.java:2	Package name contains upper case characters
+src/Synergeio/Fanopoios.java:8	Avoid variables with short names like AT
+src/Synergeio/Fanopoios.java:8	Parameter 'AT' is not assigned and could be declared final
+src/Synergeio/Fanopoios.java:8	Parameter 'dieythinsi' is not assigned and could be declared final
+src/Synergeio/Fanopoios.java:8	Parameter 'epitheto' is not assigned and could be declared final
+src/Synergeio/Fanopoios.java:8	Parameter 'onoma' is not assigned and could be declared final
+src/Synergeio/Fanopoios.java:8	Parameter 'thl' is not assigned and could be declared final
+src/Synergeio/Grammateas.java:2	Package name contains upper case characters
+src/Synergeio/Grammateas.java:8	Avoid variables with short names like AT
+src/Synergeio/Grammateas.java:8	Parameter 'AT' is not assigned and could be declared final
+src/Synergeio/Grammateas.java:8	Parameter 'dieythinsi' is not assigned and could be declared final
+src/Synergeio/Grammateas.java:8	Parameter 'epitheto' is not assigned and could be declared final
+src/Synergeio/Grammateas.java:8	Parameter 'onoma' is not assigned and could be declared final
+src/Synergeio/Grammateas.java:8	Parameter 'thl' is not assigned and could be declared final
+src/Synergeio/Hlektrologos.java:2	Package name contains upper case characters
+src/Synergeio/Hlektrologos.java:8	Avoid variables with short names like AT
+src/Synergeio/Hlektrologos.java:8	Parameter 'AT' is not assigned and could be declared final
+src/Synergeio/Hlektrologos.java:8	Parameter 'dieythinsi' is not assigned and could be declared final
+src/Synergeio/Hlektrologos.java:8	Parameter 'epitheto' is not assigned and could be declared final
+src/Synergeio/Hlektrologos.java:8	Parameter 'onoma' is not assigned and could be declared final
+src/Synergeio/Hlektrologos.java:8	Parameter 'thl' is not assigned and could be declared final
+src/Synergeio/IstorikoErgasiwn.java:2	Package name contains upper case characters
+src/Synergeio/IstorikoErgasiwn.java:9	Avoid variables with short names like e
+src/Synergeio/IstorikoErgasiwn.java:9	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/IstorikoErgasiwn.java:12	Avoid variables with short names like e
+src/Synergeio/IstorikoErgasiwn.java:12	Parameter 'e' is not assigned and could be declared final
+src/Synergeio/IstorikoErgasiwn.java:17	Avoid variables with short names like e
+src/Synergeio/IstorikoErgasiwn.java:17	Parameter 'e' is not assigned and could be declared final
+src/Synergeio/Mixanikos.java:2	Package name contains upper case characters
+src/Synergeio/Mixanikos.java:8	Avoid variables with short names like AT
+src/Synergeio/Mixanikos.java:8	Parameter 'AT' is not assigned and could be declared final
+src/Synergeio/Mixanikos.java:8	Parameter 'dieythinsi' is not assigned and could be declared final
+src/Synergeio/Mixanikos.java:8	Parameter 'epitheto' is not assigned and could be declared final
+src/Synergeio/Mixanikos.java:8	Parameter 'onoma' is not assigned and could be declared final
+src/Synergeio/Mixanikos.java:8	Parameter 'thl' is not assigned and could be declared final
+src/Synergeio/Person.java:2	Package name contains upper case characters
+src/Synergeio/Person.java:5	Abstract classes should be named AbstractXXX
+src/Synergeio/Person.java:5	This abstract class does not have any abstract methods
+src/Synergeio/Person.java:23	Parameter 'onoma' is not assigned and could be declared final
+src/Synergeio/Person.java:33	Parameter 'epitheto' is not assigned and could be declared final
+src/Synergeio/Person.java:43	Parameter 'dieythinsi' is not assigned and could be declared final
+src/Synergeio/Person.java:53	Parameter 'thl' is not assigned and could be declared final
+src/Synergeio/Person.java:63	Avoid variables with short names like AT
+src/Synergeio/Person.java:63	Parameter 'AT' is not assigned and could be declared final
+src/Synergeio/SynergeioMain.java:1	Package name contains upper case characters
+src/Synergeio/SynergeioMain.java:31	Avoid really long classes.
+src/Synergeio/SynergeioMain.java:31	The class 'SynergeioMain' has a Cyclomatic Complexity of 7 (Highest = 16).
+src/Synergeio/SynergeioMain.java:31	This class has too many methods, consider refactoring it.
+src/Synergeio/SynergeioMain.java:33	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/SynergeioMain.java:33	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/SynergeioMain.java:33	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/SynergeioMain.java:33	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/SynergeioMain.java:33	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/SynergeioMain.java:33	Private field 'cards' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/SynergeioMain.java:33	Private field 'panelEgrPelati' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/SynergeioMain.java:33	Private field 'panelEktPelati' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/SynergeioMain.java:33	Private field 'panelNewTexnikos' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/SynergeioMain.java:33	Private field 'panelTropPelati' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/SynergeioMain.java:34	Avoid excessively long variable names like panelDiathesimotita
+src/Synergeio/SynergeioMain.java:34	Avoid excessively long variable names like panelDiekperaiwshErg
+src/Synergeio/SynergeioMain.java:34	Avoid excessively long variable names like panelNewGrammateas
+src/Synergeio/SynergeioMain.java:34	Avoid excessively long variable names like panelProgramErgasia
+src/Synergeio/SynergeioMain.java:36	Perhaps 'menuBar' could be replaced by a local variable.
+src/Synergeio/SynergeioMain.java:37	Avoid excessively long variable names like kataxwrhshYpallilwn
+src/Synergeio/SynergeioMain.java:37	Perhaps 'pelatis' could be replaced by a local variable.
+src/Synergeio/SynergeioMain.java:56	Perhaps 'addpelatiButton' could be replaced by a local variable.
+src/Synergeio/SynergeioMain.java:62	Avoid variables with short names like AT
+src/Synergeio/SynergeioMain.java:62	The field name indicates a constant but its modifiers do not
+src/Synergeio/SynergeioMain.java:66	Perhaps 'synergeioLB' could be replaced by a local variable.
+src/Synergeio/SynergeioMain.java:76	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/SynergeioMain.java:76	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/SynergeioMain.java:76	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/SynergeioMain.java:76	Use ArrayList instead of Vector
+src/Synergeio/SynergeioMain.java:76	Use explicit scoping instead of the default package private level
+src/Synergeio/SynergeioMain.java:78	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/SynergeioMain.java:78	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/SynergeioMain.java:78	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/SynergeioMain.java:78	Use ArrayList instead of Vector
+src/Synergeio/SynergeioMain.java:78	Use explicit scoping instead of the default package private level
+src/Synergeio/SynergeioMain.java:80	Use explicit scoping instead of the default package private level
+src/Synergeio/SynergeioMain.java:81	Use explicit scoping instead of the default package private level
+src/Synergeio/SynergeioMain.java:87	Parameter 'args' is not assigned and could be declared final
+src/Synergeio/SynergeioMain.java:88	To be compliant to J2EE, a webapp should not use any thread.
+src/Synergeio/SynergeioMain.java:94	Local variable 'frame' could be declared final
+src/Synergeio/SynergeioMain.java:97	Avoid printStackTrace(); use a logger call instead.
+src/Synergeio/SynergeioMain.java:106	It is a good practice to call super() in a constructor
+src/Synergeio/SynergeioMain.java:106	The constructor 'SynergeioMain' has a Cyclomatic Complexity of 16.
+src/Synergeio/SynergeioMain.java:106	The constructor with 0 parameters has an NCSS line count of 556
+src/Synergeio/SynergeioMain.java:207	The String literal "Book Antiqua" appears 10 times in this file; the first occurrence is on line 207
+src/Synergeio/SynergeioMain.java:217	The String literal "Όνομα" appears 5 times in this file; the first occurrence is on line 217
+src/Synergeio/SynergeioMain.java:226	The String literal "Επίθετο" appears 5 times in this file; the first occurrence is on line 226
+src/Synergeio/SynergeioMain.java:235	The String literal "Διεύθυνση" appears 5 times in this file; the first occurrence is on line 235
+src/Synergeio/SynergeioMain.java:244	The String literal "Τηλέφωνο" appears 5 times in this file; the first occurrence is on line 244
+src/Synergeio/SynergeioMain.java:413	Local variable 'label_16' could be declared final
+src/Synergeio/SynergeioMain.java:419	Local variable 'label_15' could be declared final
+src/Synergeio/SynergeioMain.java:429	Local variable 'label_10' could be declared final
+src/Synergeio/SynergeioMain.java:438	Local variable 'label_11' could be declared final
+src/Synergeio/SynergeioMain.java:786	Avoid variables with short names like e
+src/Synergeio/SynergeioMain.java:786	Parameter 'e' is not assigned and could be declared final
+src/Synergeio/SynergeioMain.java:797	Avoid variables with short names like e
+src/Synergeio/SynergeioMain.java:797	Parameter 'e' is not assigned and could be declared final
+src/Synergeio/SynergeioMain.java:812	Parameter 'arg0' is not assigned and could be declared final
+src/Synergeio/SynergeioMain.java:822	Avoid variables with short names like e
+src/Synergeio/SynergeioMain.java:822	Parameter 'e' is not assigned and could be declared final
+src/Synergeio/SynergeioMain.java:867	Avoid variables with short names like e
+src/Synergeio/SynergeioMain.java:975	Avoid unnecessary comparisons in boolean expressions
+src/Synergeio/SynergeioMain.java:1003	Avoid unnecessary comparisons in boolean expressions
+src/Synergeio/SynergeioMain.java:1032	Avoid unnecessary comparisons in boolean expressions
+src/Synergeio/SynergeioMain.java:1058	Avoid unnecessary comparisons in boolean expressions
+src/Synergeio/SynergeioMain.java:1073	Found 'DU'-anomaly for variable 'eidikotita' (lines '1.073'-'1.112').
+src/Synergeio/SynergeioMain.java:1083	Avoid unnecessary comparisons in boolean expressions
+src/Synergeio/SynergeioMain.java:1085	Found 'DD'-anomaly for variable 't' (lines '1.085'-'1.088').
+src/Synergeio/SynergeioMain.java:1085	Found 'DD'-anomaly for variable 't' (lines '1.085'-'1.092').
+src/Synergeio/SynergeioMain.java:1085	Found 'DD'-anomaly for variable 't' (lines '1.085'-'1.097').
+src/Synergeio/SynergeioMain.java:1198	Found 'DU'-anomaly for variable 'at' (lines '1.198'-'1.218').
+src/Synergeio/SynergeioMain.java:1203	These nested if statements could be combined
+src/Synergeio/SynergeioMain.java:1245	The method 'kataxwrhshErgasias' has a Cyclomatic Complexity of 14.
+src/Synergeio/SynergeioMain.java:1250	Found 'DD'-anomaly for variable 'c' (lines '1.250'-'1.254').
+src/Synergeio/SynergeioMain.java:1250	Found 'DU'-anomaly for variable 'c' (lines '1.250'-'1.344').
+src/Synergeio/SynergeioMain.java:1254	Found 'DU'-anomaly for variable 'c' (lines '1.254'-'1.344').
+src/Synergeio/SynergeioMain.java:1267	Found 'DD'-anomaly for variable 'erg' (lines '1.267'-'1.289').
+src/Synergeio/SynergeioMain.java:1267	Found 'DD'-anomaly for variable 'erg' (lines '1.267'-'1.296').
+src/Synergeio/SynergeioMain.java:1267	Found 'DD'-anomaly for variable 'erg' (lines '1.267'-'1.303').
+src/Synergeio/SynergeioMain.java:1267	Found 'DU'-anomaly for variable 'erg' (lines '1.267'-'1.344').
+src/Synergeio/SynergeioMain.java:1277	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/SynergeioMain.java:1278	Avoid if (x != y) ..; else ..;
+src/Synergeio/SynergeioMain.java:1284	Found 'DD'-anomaly for variable 'h1' (lines '1.284'-'1.284').
+src/Synergeio/SynergeioMain.java:1284	Found 'DU'-anomaly for variable 'h1' (lines '1.284'-'1.344').
+src/Synergeio/SynergeioMain.java:1285	Found 'DD'-anomaly for variable 'm1' (lines '1.285'-'1.285').
+src/Synergeio/SynergeioMain.java:1285	Found 'DU'-anomaly for variable 'm1' (lines '1.285'-'1.344').
+src/Synergeio/SynergeioMain.java:1289	Avoid instantiating new objects inside loops
+src/Synergeio/SynergeioMain.java:1289	Avoid using if...else statements without curly braces
+src/Synergeio/SynergeioMain.java:1296	Avoid instantiating new objects inside loops
+src/Synergeio/SynergeioMain.java:1296	Avoid using if...else statements without curly braces
+src/Synergeio/SynergeioMain.java:1301	Avoid using if statements without curly braces
+src/Synergeio/SynergeioMain.java:1303	Avoid instantiating new objects inside loops
+src/Synergeio/SynergeioMain.java:1352	Found 'DU'-anomaly for variable 'at' (lines '1.352'-'1.376').
+src/Synergeio/SynergeioMain.java:1353	Found 'DD'-anomaly for variable 't' (lines '1.353'-'1.358').
+src/Synergeio/SynergeioMain.java:1353	Found 'DU'-anomaly for variable 't' (lines '1.353'-'1.376').
+src/Synergeio/SynergeioMain.java:1357	These nested if statements could be combined
+src/Synergeio/SynergeioMain.java:1358	Found 'DU'-anomaly for variable 't' (lines '1.358'-'1.376').
+src/Synergeio/SynergeioMain.java:1368	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/SynergeioMain.java:1373	Avoid using if...else statements without curly braces
+src/Synergeio/SynergeioMain.java:1379	The method 'diekperaiwshErgasias' has a Cyclomatic Complexity of 11.
+src/Synergeio/SynergeioMain.java:1384	Found 'DD'-anomaly for variable 't' (lines '1.384'-'1.389').
+src/Synergeio/SynergeioMain.java:1388	These nested if statements could be combined
+src/Synergeio/SynergeioMain.java:1401	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/SynergeioMain.java:1403	Avoid instantiating new objects inside loops
+src/Synergeio/SynergeioMain.java:1425	Avoid using if statements without curly braces
+src/Synergeio/SynergeioMain.java:1428	Avoid using if statements without curly braces
+src/Synergeio/SynergeioMain.java:1489	Avoid printStackTrace(); use a logger call instead.
+src/Synergeio/SynergeioMain.java:1497	The method 'actionPerformed' has a Cyclomatic Complexity of 13.
+src/Synergeio/SynergeioMain.java:1542	System.exit() should not be used in J2EE/JEE apps
+src/Synergeio/Texnikos.java:2	Package name contains upper case characters
+src/Synergeio/Texnikos.java:8	Abstract classes should be named AbstractXXX
+src/Synergeio/Texnikos.java:10	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:10	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:10	Avoid variables with short names like a
+src/Synergeio/Texnikos.java:10	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/Texnikos.java:10	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Texnikos.java:10	Private field 'a' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/Texnikos.java:10	Use ArrayList instead of Vector
+src/Synergeio/Texnikos.java:11	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:11	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:11	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/Texnikos.java:11	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Texnikos.java:11	Private field 'ergasies' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/Texnikos.java:11	Use ArrayList instead of Vector
+src/Synergeio/Texnikos.java:12	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:12	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:12	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/Texnikos.java:12	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/Synergeio/Texnikos.java:12	Private field 'istoriko' could be made final; it is only initialized in the declaration or constructor.
+src/Synergeio/Texnikos.java:12	Use ArrayList instead of Vector
+src/Synergeio/Texnikos.java:15	Avoid variables with short names like AT
+src/Synergeio/Texnikos.java:15	Parameter 'AT' is not assigned and could be declared final
+src/Synergeio/Texnikos.java:15	Parameter 'dieythinsi' is not assigned and could be declared final
+src/Synergeio/Texnikos.java:15	Parameter 'epitheto' is not assigned and could be declared final
+src/Synergeio/Texnikos.java:15	Parameter 'onoma' is not assigned and could be declared final
+src/Synergeio/Texnikos.java:15	Parameter 'thl' is not assigned and could be declared final
+src/Synergeio/Texnikos.java:20	Avoid variables with short names like e
+src/Synergeio/Texnikos.java:25	Avoid variables with short names like e
+src/Synergeio/Texnikos.java:30	Avoid variables with short names like i
+src/Synergeio/Texnikos.java:35	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:35	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:35	Consider replacing this Vector with the newer java.util.List
+src/Synergeio/Texnikos.java:65	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:65	Avoid using implementation types like 'Vector'; use the interface instead
+src/Synergeio/Texnikos.java:65	Consider replacing this Vector with the newer java.util.List

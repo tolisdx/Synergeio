@@ -8,15 +8,15 @@ public abstract class Person {
     private String epitheto;  //epitheto
     private String dieythinsi;  //dieyhtinsi
     private String thl;    //thlefwno
-    private String AT;       //arithmos tautothtas
+    private String at;       //arithmos tautothtas // NOPMD by Tolis on 20/1/2013 1:42 ��
     
     //kataskevasths
-    public Person(String onoma, String epitheto, String dieythinsi, String thl, String AT){
+    public Person(String onoma, String epitheto, String dieythinsi, String thl, String AT){ // NOPMD by Tolis on 20/1/2013 1:40 ��
         this.onoma = onoma;
         this.epitheto = epitheto;
         this.dieythinsi = dieythinsi;
         this.thl = thl;
-        this.AT = AT;
+        this.at = AT;
     }
     
     //set onoma   
@@ -61,20 +61,21 @@ public abstract class Person {
     
     //set arithmo tautotitas
     public void setAT(String AT){
-        this.AT = AT;
+        this.at = AT;
     }
     
     //get arithmo tautotitas
     public String getAT(){
-        return this.AT;
+        return this.at;
     }
     
-    
+    //Ektypwsh tou person
     @Override
     public String toString(){
-        return "Ονομα: " + this.onoma + ", Επίθετο: " + this.epitheto + ", Διεύθυνση: " + this.dieythinsi + ", Τηλέφωνο: " + this.thl + ", Αριθμός ταυτότητας: " + this.AT;
+        return "Όνομα: " + this.onoma + ", Επίθετο: " + this.epitheto + ", Διεύθυνση: " + this.dieythinsi + ", Τηλέφωνο: " + this.thl + ", Αριθμός ταυτότητας: " + this.at;
     }
-   
+    
+  
 
 }
 
